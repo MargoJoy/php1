@@ -51,9 +51,9 @@ function dis( $a, $b, $c )
 //для вывода, иначе путается с табличкой))
 $discr =  dis( $a, $b, $c );
 
-assert(dis(5, 9, 3) == 21);
-assert(dis(9, 5, 3) == -83);
-assert(dis(3, 6, 3) == 0);
+assert( dis( 5, 9, 3 ) == 21 );
+assert( dis( 9, 5, 3 ) == -83 );
+assert( dis( 3, 6, 3 ) == 0 );
 
 //корень из дискриминанта
 $D = sqrt( dis( $a, $b, $c ) );
@@ -111,9 +111,9 @@ function gender($name)
     }
 }
 
-assert(gender('Александр') == 'Мужской пол');
-assert(gender('Елена') == 'Женский пол');
-assert(gender('Ц') == null);
+assert( gender( 'Александр' ) == 'Мужской пол' );
+assert( gender( 'Елена' ) == 'Женский пол' );
+assert( gender( 'Ц' ) == null );
 
 
 
