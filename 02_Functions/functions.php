@@ -62,16 +62,14 @@ $D = sqrt( dis( $a, $b, $c ) );
 if ( dis( $a, $b, $c ) < 0 ) {
      $res = 'Корней нет!';
 //если дискриминант больше нуля, корней 2
-} elseif ( dis( $a, $b, $c ) > 0 )
-{
+} elseif ( dis( $a, $b, $c ) > 0 ) {
 //вычисление корней
     $x1 = ( -1 * $b - $D ) / ( 2 * $a );
     $x2 = ( -1 * $b + $D ) / ( 2 * $a );
 //кол-во корней
     $res = 'Корней 2';
 //если дискриминант равен нулю, корень один
-} elseif ( dis( $a, $b, $c ) == 0 )
-{
+} elseif ( dis( $a, $b, $c ) == 0 ) {
 //вычисление корня
     $x1 = ( -1 * $b ) / ( 2 * $a );
     $res = 'Корень 1';
@@ -91,21 +89,20 @@ $inc = include __DIR__ . '/include.php';
 
 //==========4==========
 
-function gender($name){
+function gender($name)
+{
 //возвращает часть строки
     $genderString = mb_substr($name, - 1);
 //переводит эту часть строки к нижнему регистру
     $genderName = mb_strtolower($genderString);
 //если полученная часть строки совпадает с перечисленными то
-    if( $genderName == 'а' || $genderName == 'я' || $genderName == 'ь' )
-    {
+    if( $genderName == 'а' || $genderName == 'я' || $genderName == 'ь' ) {
 //вернет значение
         return 'Женский пол';
 //если раньше не нашлось совпадений, то сравнить с другими
     } elseif ($genderName == 'л' || $genderName == 'р' || $genderName == 'й'||
         $genderName == 'н'|| $genderName == 'м' || $genderName == 'т' ||
-        $genderName == 'с' || $genderName == 'в')
-    {
+        $genderName == 'с' || $genderName == 'в') {
 //если совпало то вернется
         return 'Мужской пол';
 //если снова не нашлось совпадений, то вернется null
