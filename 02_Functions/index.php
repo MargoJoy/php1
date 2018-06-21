@@ -83,8 +83,8 @@ include __DIR__ . '/functions.php';
 <div>
     <h3>Пункт 3.  Изучение Include в виде функции </h3>
 
-    <p><?php var_dump( $inc ); ?></p>
-    <p><?php var_dump( $incTest ) ;?></p>
+    <p><?php var_dump($inc); ?></p>
+    <p><?php var_dump($incTest) ;?></p>
     <p><?php echo $inc; ?></p>
 </div>
 

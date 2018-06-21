@@ -1,12 +1,11 @@
 <?php
-
 //==========1==========
 
 //функция bool_and принимает 2 аргумента
-function bool_and( $a, $b )
+function bool_and($a, $b)
 {
     // если оба аргумента равни 1 true, иначе false
-    if ( $a  && $b ) {
+    if ($a  && $b) {
         $res = 'true';
     } else {
         $res = 'false';
@@ -15,9 +14,9 @@ function bool_and( $a, $b )
     return $res;
 }
 
-function bool_or( $a, $b )
+function bool_or($a, $b)
 {
-    if ( $a || $b ) {
+    if ($a || $b) {
         $res = 'true';
     } else {
         $res = 'false';
@@ -25,9 +24,9 @@ function bool_or( $a, $b )
     return $res;
 }
 
-function bool_xor( $a, $b )
+function bool_xor($a, $b)
 {
-    if ( $a xor $b ) {
+    if ($a xor $b) {
         $res = 'true';
     } else {
         $res = 'false';
@@ -41,7 +40,7 @@ $b = 9;
 $c = 3;
 
 //вычисление дискриминанта
-function dis( $a, $b, $c )
+function dis($a, $b, $c)
 {
 //формула
     $d = $b * $b - 4 * $a * $c;
@@ -49,29 +48,29 @@ function dis( $a, $b, $c )
 }
 
 //для вывода, иначе путается с табличкой))
-$discr =  dis( $a, $b, $c );
+$discr =  dis($a, $b, $c);
 
 assert( dis( 5, 9, 3 ) == 21 );
 assert( dis( 9, 5, 3 ) == -83 );
 assert( dis( 3, 6, 3 ) == 0 );
 
 //корень из дискриминанта
-$D = sqrt( dis( $a, $b, $c ) );
+$D = sqrt(dis($a, $b, $c));
 
 //если дискриминант меньше нуля, корней нет
-if ( dis( $a, $b, $c ) < 0 ) {
+if (dis($a, $b, $c ) < 0 ) {
      $res = 'Корней нет!';
 //если дискриминант больше нуля, корней 2
-} elseif ( dis( $a, $b, $c ) > 0 ) {
+} elseif (dis($a, $b, $c) > 0 ) {
 //вычисление корней
-    $x1 = ( -1 * $b - $D ) / ( 2 * $a );
-    $x2 = ( -1 * $b + $D ) / ( 2 * $a );
+    $x1 = (-1 * $b - $D) / (2 * $a);
+    $x2 = (-1 * $b + $D) / (2 * $a);
 //кол-во корней
     $res = 'Корней 2';
 //если дискриминант равен нулю, корень один
-} elseif ( dis( $a, $b, $c ) == 0 ) {
+} elseif (dis( $a, $b, $c) == 0) {
 //вычисление корня
-    $x1 = ( -1 * $b ) / ( 2 * $a );
+    $x1 = (-1 * $b) / (2 * $a);
     $res = 'Корень 1';
 }
 
@@ -96,7 +95,7 @@ function gender($name)
 //переводит эту часть строки к нижнему регистру
     $genderName = mb_strtolower($genderString);
 //если полученная часть строки совпадает с перечисленными то
-    if( $genderName == 'а' || $genderName == 'я' || $genderName == 'ь' ) {
+    if ($genderName == 'а' || $genderName == 'я' || $genderName == 'ь') {
 //вернет значение
         return 'Женский пол';
 //если раньше не нашлось совпадений, то сравнить с другими
