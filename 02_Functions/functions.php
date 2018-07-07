@@ -108,27 +108,6 @@ function gender($name)
     }
 }
 
-
 assert( gender( 'Александр' ) == 'Мужской пол' );
 assert( gender( 'Елена' ) == 'Женский пол' );
 assert( gender( 'Ц' ) == null );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
