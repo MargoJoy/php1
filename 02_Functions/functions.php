@@ -71,6 +71,7 @@ if (dis($a, $b, $c ) < 0 ) {
     $res = 'Корень 1';
 }
 
+
 //==========3==========
 
 /*
@@ -106,6 +107,7 @@ function gender($name)
         return null;
     }
 }
+
 
 assert( gender( 'Александр' ) == 'Мужской пол' );
 assert( gender( 'Елена' ) == 'Женский пол' );

@@ -11,6 +11,7 @@ include __DIR__ . '/functions.php';
     <title>Функции. Операторы контроля. Включение файлов</title>
 </head>
 <body>
+
 <h3>Пункт 1. Таблица истинности </h3>
 <table border="1" cellpadding="5">
     <tr>

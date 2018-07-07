@@ -11,6 +11,7 @@ include __DIR__ . '/functions.php';
     <title>Функции. Операторы контроля. Включение файлов</title>
 </head>
 <body>
+
 <h3>Пункт 3.  Изучение Include в виде функции </h3>
 
 <p><?php var_dump($inc); ?></p>
