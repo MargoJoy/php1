@@ -6,9 +6,9 @@ function bool_and($a, $b)
 {
     // если оба аргумента равни 1 true, иначе false
     if ($a  && $b) {
-        $res = 'true';
+        $res = 1;
     } else {
-        $res = 'false';
+        $res = 0;
     }
     //возвращается значение
     return $res;
@@ -17,9 +17,9 @@ function bool_and($a, $b)
 function bool_or($a, $b)
 {
     if ($a || $b) {
-        $res = 'true';
+        $res = 1;
     } else {
-        $res = 'false';
+        $res = 0;
     }
     return $res;
 }
@@ -27,9 +27,9 @@ function bool_or($a, $b)
 function bool_xor($a, $b)
 {
     if ($a xor $b) {
-        $res = 'true';
+        $res = 1;
     } else {
-        $res = 'false';
+        $res = 0;
     }
     return $res;
 }
@@ -47,9 +47,6 @@ function dis($a, $b, $c)
     return $d;
 }
 
-//для вывода, иначе путается с табличкой))
-$discr =  dis($a, $b, $c);
-
 assert( dis( 5, 9, 3 ) == 21 );
 assert( dis( 9, 5, 3 ) == -83 );
 assert( dis( 3, 6, 3 ) == 0 );
@@ -59,7 +56,7 @@ $D = sqrt(dis($a, $b, $c));
 
 //если дискриминант меньше нуля, корней нет
 if (dis($a, $b, $c ) < 0 ) {
-     $res = 'Корней нет!';
+    $res = 'Корней нет!';
 //если дискриминант больше нуля, корней 2
 } elseif (dis($a, $b, $c) > 0 ) {
 //вычисление корней
@@ -83,7 +80,7 @@ if (dis($a, $b, $c ) < 0 ) {
 */
 
 $inc = include __DIR__ . '/include.php';
-//$incTest = include __DIR__ . '/includeTest.php';
+//$incTest = include __DIR__ . '/includeNull.php';
 
 
 //==========4==========
