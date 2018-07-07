@@ -1,25 +1,7 @@
 <?php
 include __DIR__ . '/funcCalc.php';
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Массивы. Циклы. Взаимодействие с пользователем.</title>
-    <style>
-        img{
-            max-width: 300px;
-        }
-        .gal, .calc{
-            max-width: 650px;
-            margin: 40px auto;
-        }
-    </style>
-</head>
-<body>
+
 <div class="calc">
     <h3>Калькулятор</h3>
 
@@ -45,5 +27,3 @@ include __DIR__ . '/funcCalc.php';
         <span> <?php echo $z; ?></span>
     </form>
 </div>
-</body>
-</html>
