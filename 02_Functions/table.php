@@ -1,5 +1,36 @@
 <?php
-include __DIR__ . '/functions.php';
+//функция bool_and принимает 2 аргумента
+function bool_and($a, $b)
+{
+    // если оба аргумента равни 1 true, иначе false
+    if ($a  && $b) {
+        $res = 1;
+    } else {
+        $res = 0;
+    }
+    //возвращается значение
+    return $res;
+}
+
+function bool_or($a, $b)
+{
+    if ($a || $b) {
+        $res = 1;
+    } else {
+        $res = 0;
+    }
+    return $res;
+}
+
+function bool_xor($a, $b)
+{
+    if ($a xor $b) {
+        $res = 1;
+    } else {
+        $res = 0;
+    }
+    return $res;
+}
 ?>
 
 

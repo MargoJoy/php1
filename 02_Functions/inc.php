@@ -1,5 +1,6 @@
 <?php
-include __DIR__ . '/functions.php';
+$inc = include __DIR__ . '/include.php';
+//$incTest = include __DIR__ . '/includeNull.php';
 ?>
 
 <h3>Пункт 3.  Изучение Include в виде функции </h3>
