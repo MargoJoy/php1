@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/funCalc.php';
-//===========Калькулятор===========
+
 //если были установлены переменные
 if (isset($_GET['x']) || isset($_GET['y']) || isset($_GET['arithmetic'])) {
 //то присваиваем их значение новым переменным для дальнейшей работы
@@ -13,7 +13,6 @@ if (isset($_GET['x']) || isset($_GET['y']) || isset($_GET['arithmetic'])) {
     $y = null;
     $oper = null;
 }
-
 
 //вывод получившегося значения
 $z = calc($x, $y, $oper);
