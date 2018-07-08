@@ -1,5 +1,6 @@
 <?php
-include __DIR__ . '/imgArray.php';
+$image = include __DIR__ . '/imgArray.php';
+
 //в переиенную полученное методом get значение
 $photo = $_GET['id'];
 ?>

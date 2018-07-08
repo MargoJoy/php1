@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/imgArray.php';
+$image = include __DIR__ . '/imgArray.php';
 ?>
 
 <h3>Галерея</h3>
