@@ -15,7 +15,7 @@ $list = array_diff($list, ['.','..']);
 </form>
 
 <? foreach ($list as $name){ ?>
-    <a href="image.php?id=<? echo $name; ?>">
+    <a href="/image.php?id=<? echo $name; ?>">
         <img src="/img/<? echo $name; ?>" alt="" width="300px">
     </a>
 <?}?>
