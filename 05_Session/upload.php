@@ -14,7 +14,8 @@ $log = $userName . ' | ' . $date . ' | ' . $fileName . "\n";
 $logPath = __DIR__ . '/log.txt';
 
 if (isset($_FILES['newImg'])) {
-    if (0 == $_FILES['newImg']['error']) {
+//проверка на наличие файла и существование пользователя
+    if ((0 == $_FILES['newImg']['error']) && (isset($userName))) {
         $name = basename($_FILES['newImg']['name']);
         $get_name = explode('.', $name);
         $val = mb_strtoupper(end($get_name));
