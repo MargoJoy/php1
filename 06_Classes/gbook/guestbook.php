@@ -3,6 +3,7 @@ include __DIR__ . '/gbookUpload.php';
 
 ?>
 <h3>Гостевая книга</h3>
+
 <?php foreach ($guestbook->getData() as $line){ ?>
     <p><?php echo $line; ?></p>
 <?php } ?>
