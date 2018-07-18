@@ -3,6 +3,7 @@ session_start();
 include __DIR__ . '/functions.php';
 $type = include __DIR__ . '/upType.php';
 
+
 //пользователь
 $userName = getCurrentUser();
 //дата

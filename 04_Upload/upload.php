@@ -15,5 +15,5 @@ if (isset($_FILES['newImg'])) {
         );
     }
 //перенаправляет на страницу галереи
-    header('Location: /gallery.php');
+    header('Location: /index.php');
 }

@@ -8,7 +8,7 @@ $str = read();
     <p><?php echo $string; ?></p>
 <?}?>
 
-<form action="/funcGb.php" method="post">
+<form action="/gBookRecords.php" method="post">
     <label for="">
        <input type="text" name="text">
     </label>
