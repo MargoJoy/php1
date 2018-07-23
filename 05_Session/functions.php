@@ -39,8 +39,8 @@ function checkPassword($login, $password)
 //возвращает либо имя вошедшего на сайт пользователя, либо null
 function getCurrentUser()
 {
-    if (existsUser($_SESSION['name'])) {
-        if (isset($_SESSION['name'])) {
+    if (existsUser($_SESSION['name']) == true) {
+        if (!empty($_SESSION['name']) && isset($_SESSION['name'])) {
             $name = $_SESSION['name'];
             return $name;
         } else {
