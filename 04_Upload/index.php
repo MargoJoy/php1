@@ -5,7 +5,7 @@ $list = scandir(__DIR__ . '/img');
 $list = array_diff($list, ['.','..']);
 ?>
 
-    <a href="/gBook.php">Гостевая книга</a>
+<a href="/gBook.php">Гостевая книга</a>
 
 <form action="/upload.php" method="post" enctype="multipart/form-data" >
     <label for="img">Загрузить файл<br>
