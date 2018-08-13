@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/funcGb.php';
-
+$path = __DIR__ . '/text.txt';
 $line = $_POST['text'];
 //если установленна переменная отличная от нуля
 if (isset($line)) {

@@ -1,5 +1,4 @@
 <?php
-$path = __DIR__ . '/text.txt';
 
 function read()
 {

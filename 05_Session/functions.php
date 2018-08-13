@@ -11,19 +11,17 @@ function getUsersList()
 function existsUser($login)
 {
 //Проверяет, присутствует ли в массиве указанный ключ или индекс
-    foreach (getUsersList() as $key => $array ){
-        if ($key == $login){
-            return true;
-        }
+    if (getUsersList()[$login]){
+        return true;
     }
     return false;
 }
 
 //возвращает true, когда существует пользователь с указанным логином и введенный им пароль прошел проверку
+
 function checkPassword($login, $password)
 {
-
-    if (!empty(existsUser($login)) && existsUser($login) == true) {
+    if (true === existsUser($login)) {
         $access = password_verify($password, getUsersList()[$login]);
 
         if ($access == true){

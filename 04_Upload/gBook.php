@@ -1,14 +1,14 @@
 <?php
 include __DIR__ . '/funcGb.php';
 
-$str = read();
+$strings = read();
 ?>
 
-<?php foreach ($str as $string){ ?>
+<?php foreach ($strings as $string){ ?>
     <p><?php echo $string; ?></p>
 <?}?>
 
-<form action="/gBookRecords.php" method="post">
+<form action="/gBookRecord.php" method="post">
     <label for="">
        <input type="text" name="text">
     </label>
