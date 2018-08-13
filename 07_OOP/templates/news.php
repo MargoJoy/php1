@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,22 +9,12 @@
 </head>
 <body>
 
-<a href="/index.php">На главную</a>
-<h1>Раздел новости</h1>
-
-
-
-<!--перебор массива-->
-<?php foreach ($data['news'] as $key => $value) { ?>
-    <!--переход по ссылке с id-->
-    <a href="/article.php?id=<?php echo $key;?>">
-        <!--Вывод заголовка новости-->
-        <?php echo $value->getArticle()['title'];?>
+<a href="/index.php">Главная</a><br>
+<?php foreach ($data['news'] as $id => $article){ ?>
+    <a href="/article.php?id=<?php echo $id; ?>">
+        <?php echo $article->title; ?>
     </a>
-    <p>
-        <!--частичнаый вывод додержимого новости-->
-        <?php echo mb_substr($value->getArticle()['text'], 0 , 100);?>...
-    </p>
+    <p><?php echo $article->text; ?></p>
 <?php } ?>
 
 </body>

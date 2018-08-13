@@ -1,15 +1,12 @@
 <?php
 session_start();
 
-//есть переменная $_GET['do'] и имеет значение 'exit'
+
 if (isset($_GET['do']) && $_GET['do'] == 'exit') {
-//удаляет переменную из сессии
     unset($_SESSION['name']);
 }
 
-//сканирует всю папку, помещает содердимое в массив
 $list = scandir(__DIR__ . '/gallery/img');
-//удаление из массива лишних элементов
 $list = array_diff($list, ['.', '..']);
 ?>
 

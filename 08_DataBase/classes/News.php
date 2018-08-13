@@ -1,22 +1,22 @@
 <?php
 require_once __DIR__ . '/Article.php';
+require_once __DIR__ . '/Db.php';
 
 class News
 {
-    protected $query;
-    protected $bdnews;
+    protected $data;
 
-    public function __construct($query)
+    public function __construct()
     {
-        $this->query = $query;
-        foreach ($this->query as $news) {
-            $this->bdnews[] = new Article($news);
+        $db = new Db();
+        $dataNews = $db->query('SELECT * FROM news');
+
+        foreach ($dataNews as $value){
+            $this->data[] = new Article($value['title'], $value['text']);
         }
     }
-
     public function getData()
     {
-        return $this->bdnews;
+        return $this->data;
     }
-
 }

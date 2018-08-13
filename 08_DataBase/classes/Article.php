@@ -1,15 +1,19 @@
 <?php
+
 class Article
 {
-    protected $article;
+    public $id;
+    public $title;
+    public $text;
 
-    public function __construct($article)
+    public function __construct($title, $text)
     {
-        $this->article = $article;
+        $this->title = $title;
+        $this->text = $text;
     }
 
     public function getArticle()
     {
-        return $this->article;
+        return $this;
     }
 }

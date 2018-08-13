@@ -6,15 +6,12 @@ class Uploader
     public $array;
     public $types;
 
-//имя от куда ожидается загрузка
     public function __construct($formName)
     {
         $this->formName = $formName;
     }
-//был ли загружен файл от данного имени поля
     public function isUploaded()
     {
-//если не пусто и нет ошибок то true
         if ((isset($_FILES[$this->formName])) && (0 == $_FILES[$this->formName]['error'])) {
             return true;
         } else {
@@ -22,7 +19,6 @@ class Uploader
         }
     }
 
-//обсуждали в чате, дополнительный метод для проверки типа получаемого файла
     public function setAllowedTypes($array, $types)
     {
         $this->array = $array;
@@ -34,7 +30,6 @@ class Uploader
         }
     }
 
-//перенос файла в постоянное место
     public function upload()
     {
         if ($this->isUploaded() && $this->setAllowedTypes($this->array, $this->types)) {

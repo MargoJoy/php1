@@ -16,7 +16,6 @@ if (isset($_GET['do']) && $_GET['do'] == 'exit') {
     <title>Document</title>
 </head>
 <body>
-<h1>Это шаблон</h1>
 
 <a href="/guestBook.php">Гостевая книга</a><br>
 <a href="/news.php">Новости</a><br>

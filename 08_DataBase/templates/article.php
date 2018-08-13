@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,12 +8,10 @@
     <title>Document</title>
 </head>
 <body>
+<a href="/index.php">Ввсе новости</a>
+<h3><?php echo  $data['oneArticle']->title; ?></h3>
+<p><?php echo  $data['oneArticle']->text; ?></p>
 
-<h1>Шаблон одной новости</h1>
-
-<p><?php echo $data['news']['tittle']; ?></p>
-<p><?php echo $data['news']['text']; ?></p>
-<p><?php echo $data['news']['author']; ?></p>
 
 </body>
 </html>

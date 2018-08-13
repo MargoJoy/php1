@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/gbookUpload.php';
-
+$guestbook = new GuestBook(__DIR__ . '/text.txt');
 ?>
 <h3>Гостевая книга</h3>
 

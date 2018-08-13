@@ -1,22 +1,15 @@
 <?php
-require_once __DIR__ . '/classes/View.php';
-require_once __DIR__ . '/classes/DB.php';
-
+require __DIR__ . '/classes/View.php';
+require __DIR__ . '/classes/News.php';
 $temp = __DIR__ . '/templates/article.php';
-
-
-$db = new DB();
-
-$data = [];
-$data['id'] = $_GET['id'];
-
-$sql = 'SELECT * FROM news WHERE id=:id';
-$newsData = $db->query($sql, $data); //newsData //model
-
 $view = new View();
+$news = new News();
 
-if ($database) {
-    $view->assign('news', $newsData[0]);
+if (isset($_GET['id'])) {
+    $id  = $_GET['id'];
+    $article = $news->getData()[$id];
+
+    $view->assign('oneArticle', $article);
 } else {
     header('Location: /index.php');
 }

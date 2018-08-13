@@ -1,16 +1,16 @@
 <?php
 
-//возвращает массив всех пользователей и хэшей их паролей
+
 function getUsersList()
 {
     $users = include __DIR__ . '/users.php';
     return $users;
 }
 
-//проверяет - существует ли пользователь с заданным логином
+
 function existsUser($login)
 {
-//Проверяет, присутствует ли в массиве указанный ключ или индекс
+
     foreach (getUsersList() as $key => $array ){
         if ($key == $login){
             return true;
@@ -19,7 +19,7 @@ function existsUser($login)
     return false;
 }
 
-//возвращает true, когда существует пользователь с указанным логином и введенный им пароль прошел проверку
+
 function checkPassword($login, $password)
 {
 
@@ -36,7 +36,6 @@ function checkPassword($login, $password)
     }
 }
 
-//возвращает либо имя вошедшего на сайт пользователя, либо null
 function getCurrentUser()
 {
     if (existsUser($_SESSION['name']) == true) {

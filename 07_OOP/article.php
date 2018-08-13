@@ -6,16 +6,13 @@ $temp = __DIR__ . '/templates/article.php';
 $view = new View();
 $news = new News(__DIR__ . '/data/news.php');
 
-//var_dump($news);
-
 if (isset($_GET['id'])) {
     $id  = $_GET['id'];
+    $article = $news->getData()[$id];
 
-    $view->assign('oneArticle', $news->getData()[$id]);
+    $view->assign('oneArticle', $article);
 } else {
-    echo 'Новость не найдена';
-    //header('Location: /index.php');
+    header('Location: /index.php');
 }
-
 
 $view->display($temp);

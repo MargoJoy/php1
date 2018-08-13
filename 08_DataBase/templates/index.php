@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,15 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Это шаблон</h1>
 
-<?php foreach ($data['news'] as $value) {?>
-    <a href="/article.php?id=<?php echo $value->getArticle()['id'];?>"><?php echo $value->getArticle()['tittle'];?></a>
-    <p><?php echo mb_substr($value->getArticle()['text'], 0, 100) . '...' ;?></p>
-    <P><?php echo $value->getArticle()['author']; ?></P>
-    <hr>
+<?php foreach ($data['news'] as $id => $article){ ?>
+
+    <a href="/article.php?id=<?php echo $id; ?>">
+        <?php echo $article->title; ?>
+    </a>
+    <p><?php echo $article->text; ?></p>
+
 <?php } ?>
-
-
 </body>
 </html>

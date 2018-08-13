@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,11 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-<a href="/news.php">Все новости</a>
-
-<?php foreach ($data['oneArticle']->getArticle() as $value){?>
-    <p><?php echo $value;?></p>
-<?php }?>
+<a href="/news.php">Ввсе новости</a>
+<h3><?php echo  $data['oneArticle']->title; ?></h3>
+<p><?php echo  $data['oneArticle']->text; ?></p>
 
 
 </body>
