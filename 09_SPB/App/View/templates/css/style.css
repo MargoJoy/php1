@@ -1,0 +1,381 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body{
+ color: rgba(51,51,51,1);
+}
+
+
+html, body{
+    margin: 0;
+    font-size: 16px;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Marck Script', cursive;
+}
+
+.wrapper{
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav{
+    background: rgba(2,105,184,1);
+}
+
+nav .wrapper{
+    position: relative;
+}
+
+.menu{
+
+}
+
+.menu li{
+    float: left;
+}
+
+.menu li a{
+    color: rgba(255,255,255,1);
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.menuTuggle{
+    padding: 10px 15px;
+    display: none;
+}
+
+.about{
+    max-width: 950px;
+    margin: 35px auto;
+    border-left: 5px solid rgba(112,128,144,1);
+
+}
+
+.about p, h1{
+    margin: 0 10px;
+
+}
+
+.gallery{
+    max-width: 950px;
+    margin: 35px auto;
+    padding-top: 20px;
+}
+
+.gallery img{
+    width: 300px;
+    padding: 5px;
+}
+.gallery img:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+.image{
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.image img{
+    width: 1000px;
+
+}
+
+.schedule{
+    max-width: 950px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.schedule h1{
+
+}
+
+.schedule table{
+    max-width: 950px;
+    border-spacing: 0;
+    border-collapse: unset;
+}
+
+.schedule table th {
+    font-weight: normal;
+    color: rgba(2,105,184,1);
+    padding: 10px 15px;
+}
+.schedule table td {
+    color: #669;
+    border-top: 1px solid #e8edff;
+    padding: 10px 15px;
+}
+.schedule .title{
+    background: rgba(2,105,184, 0.2);
+}
+.schedule h1{
+    padding: 5px 0;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 7px solid rgba(2,105,184,1);
+}
+
+/*------admin-----*/
+
+.adminAbout{
+    padding: 15px;
+    border-bottom: 3px solid rgba(2, 105, 184, 0.7);
+}
+
+.adminAbout .form{
+
+    border-radius: 3px;
+    max-width: 950px;
+    padding-bottom: 10px;
+    background: rgba(2, 105, 184, 0.3);
+}
+
+.adminAbout .form p{
+    text-align: center;
+    background: rgba(2, 105, 184, 0.7);
+    border-radius: 3px 3px 0 0;
+    padding: 10px;
+    margin: 0;
+    color: rgba(250, 250, 250, 1);
+}
+
+.adminAbout .form form{
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.adminAbout .form textarea{
+    margin: 10px 0;
+    padding: 5px;
+    height: 100px;
+    width: 850px;
+}
+.adminAbout input[type="submit"]{
+    padding: 5px 0;
+    width: 150px;
+}
+.adminGallery .form{
+    max-width: 250px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    background: rgba(2, 105, 184, 0.3);
+}
+
+.adminGallery .form form{
+    max-width: 200px;
+    margin: 0 auto;
+}
+.adminGallery .form input[type="text"]{
+    width: 200px;
+    margin-top: 10px;
+    height: 25px;
+    padding: 5px;
+}
+.adminGallery .form p{
+    text-align: center;
+    background: rgba(2, 105, 184, 0.7);
+    border-radius: 3px 3px 0 0;
+    padding: 10px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.adminGallery .form input[type="submit"]{
+    padding: 5px 0;
+    width: 150px;
+}
+
+.scheduleChange{
+    max-width: 950px;
+    margin: 30px auto;
+}
+.scheduleChange .form{
+    max-width: 250px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    background: rgba(2, 105, 184, 0.3);
+}
+
+.scheduleChange .form form{
+    max-width: 200px;
+    margin: 0 auto;
+}
+.scheduleChange .form input[type="text"]{
+    width: 200px;
+    margin-top: 3px;
+    height: 25px;
+    padding: 5px;
+}
+.scheduleChange .form p{
+    text-align: center;
+    background: rgba(2, 105, 184, 0.7);
+    border-radius: 3px 3px 0 0;
+    padding: 10px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.scheduleChange .form input[type="submit"]{
+    margin-top: 10px;
+    padding: 5px 0;
+    width: 150px;
+}
+
+ textarea, input[type="text"] {
+    background-color: rgba(250, 250, 250, 0.7);
+    outline: none;
+    border-radius: 3px;
+    border: none;
+}
+
+textarea:focus, input[type="text"]:focus {
+    outline: none;
+    background-color: rgba(250, 250, 250, 1);
+    border-radius: 3px;
+    -webkit-transition: .9s;
+    transition: .9s;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(12, 73, 194, 0.9);
+    background-color: rgba(2, 105, 184, 0.7);
+    border: none;
+    border-radius: 3px;
+    color: #f6f6f6;
+    font-size: 1rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="submit"]:active, input[type="submit"]:hover {
+    box-shadow: none;
+}
+
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 20px;
+    background-color: rgba(2, 105, 184, 0.6);
+    box-shadow: 0 1px 1px rgba(12, 73, 194, 0.9);
+    border-radius: 3px;
+    padding: 8px 4px;
+    margin: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+.file-upload:hover {
+    background-color: rgba(2, 105, 184, 0.7);
+    box-shadow: none;
+}
+.file-upload input[type="file"]{
+    display: none;
+}
+.file-upload label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-upload span {
+    line-height: 36px;
+}
+
+.filename {
+    background: #fff;
+    border: 0;
+}
+
+.adminGallery{
+    padding: 15px;
+    border-bottom: 3px solid #0269B8;
+}
+
+.adminGallery img{
+    width: 150px;
+}
+.adminGallery .previewGallery{
+  padding: 10px 0;
+}
+.adminSchedule{
+    padding: 15px 15px 40px 15px;
+}
+
+.adminSchedule table{
+    max-width: 950px;
+    border-spacing: 0;
+    border-collapse: unset;
+}
+
+.adminSchedule table th {
+    font-weight: normal;
+    color: #039;
+    padding: 10px 15px;
+}
+.adminSchedule table td {
+    color: #669;
+    border-top: 1px solid #e8edff;
+    padding: 10px 15px;
+}
+.adminSchedule .title{
+    background: #e8edff;
+}
+
+.adminSchedule a{
+    background-color: rgba(2, 105, 184, 0.7);
+    box-shadow: 0 1px 1px rgba(12, 73, 194, 0.9);
+    border-radius: 3px;
+    padding: 5px;
+    color: white;
+}
+.adminSchedule a:focus{
+    box-shadow: none;
+}
+
+@media screen and (max-width: 560px){
+    .menu{
+        display: none;
+        position: absolute;
+        background: #0269B8;
+        width: 100%;
+    }
+    .menu li{
+        float: none;
+    }
+    .menuTuggle{
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
