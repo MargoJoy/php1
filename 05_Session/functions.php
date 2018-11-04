@@ -1,49 +1,34 @@
 <?php
-
-//возвращает массив всех пользователей и хэшей их паролей
-function getUsersList()
-{
+function getUsersList(){
     $users = include __DIR__ . '/users.php';
     return $users;
 }
 
-//проверяет - существует ли пользователь с заданным логином
-function existsUser($login)
-{
-//Проверяет, присутствует ли в массиве указанный ключ или индекс
-    if (getUsersList()[$login]){
+function existsUser($login){
+    if (isset(getUsersList()[$login])){
         return true;
-    }
-    return false;
-}
-
-//возвращает true, когда существует пользователь с указанным логином и введенный им пароль прошел проверку
-
-function checkPassword($login, $password)
-{
-    if (true === existsUser($login)) {
-        $access = password_verify($password, getUsersList()[$login]);
-
-        if ($access == true){
-            return true;
-        } else {
-            return false;
-        }
     } else {
         return false;
     }
 }
 
-//возвращает либо имя вошедшего на сайт пользователя, либо null
-function getCurrentUser()
-{
-    if (existsUser($_SESSION['name']) == true) {
-        if (!empty($_SESSION['name']) && isset($_SESSION['name'])) {
-            $name = $_SESSION['name'];
-            return $name;
+function checkPassword($login, $password){
+
+    if(existsUser($login) && password_verify($password, getUsersList()[$login] )){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function getCurrentUser() {
+    if (existsUser($_SESSION['name'])){
+        if (!empty($_SESSION['name']) && isset($_SESSION['name'])){
+            return $_SESSION['name'];
         } else {
             return null;
         }
+    } else {
+        return null;
     }
-    return null;
 }
