@@ -23,7 +23,7 @@ function checkPassword($login, $password){
 
 function getCurrentUser() {
     if (existsUser($_SESSION['name'])){
-        if (!empty($_SESSION['name']) && isset($_SESSION['name'])){
+        if (!empty($_SESSION['name'])){
             return $_SESSION['name'];
         } else {
             return null;
