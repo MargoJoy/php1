@@ -1,16 +1,19 @@
 <?php
+
 class View
 {
-    public $data = [];
+    protected $data = [];
 
     public function assign($name, $value)
     {
         $this->data[$name] = $value;
     }
+
     public function display($template)
     {
         echo $this->render($template);
     }
+
     public function render($template)
     {
         ob_start();
@@ -21,5 +24,3 @@ class View
         return $content;
     }
 }
-
-

@@ -13,4 +13,5 @@ class GuestBookRecord
     {
         return $this->message;
     }
+
 }

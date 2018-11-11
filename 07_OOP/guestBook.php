@@ -1,21 +1,27 @@
 <?php
+session_start();
+require_once __DIR__ . '/classes/Authentication.php';
 require_once __DIR__ . '/classes/View.php';
 require_once __DIR__ . '/classes/GuestBook.php';
-require_once __DIR__ . '/classes/GuestBookRecord.php';
-$temp = __DIR__ . '/templates/guestBook.php';
 
-$gbook = new GuestBook(__DIR__ . '/data/text.txt');
+$authentication = new Authentication(__DIR__ . '/data/users.php');
 
-$lines = $_POST['text'];
+$textGB = __DIR__ . '/data/text.txt';
+$template = __DIR__ . '/templates/guestBook.php';
 
-if (null !== $lines){
-    $gbookrecord = new GuestBookRecord($lines);
-    $gbook->append($gbookrecord)->save();
-    header('Location: /guestBook.php');
+$userName = $authentication->getCurrentUser();
+
+$gbook = new GuestBook($textGB);
+$newLines = $_POST['text'];
+
+if (isset($userName)) {
+    if (null !== $newLines){
+        $gbookrecord = new GuestBookRecord($newLines);
+        $gbook->append($gbookrecord)->save();
+        header('Location: /guestBook.php');
+    }
 }
 
-
 $view = new View();
-$view->assign('gBook', $gbook->getData());
-$view->display($temp);
-
+$view->assign('gbook', $gbook->getData());
+$view->display($template);

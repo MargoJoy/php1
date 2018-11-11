@@ -1,13 +1,12 @@
 <?php
-include __DIR__ . '/GuestBookRecord.php';
-
+require_once __DIR__ . '/GuestBookRecord.php';
 
 class GuestBook
 {
     public $path;
     protected $data = [];
 
-    public function __construct($path)
+    public function __construct(string $path)
     {
         $this->path = $path;
         $lines = file($this->path, FILE_IGNORE_NEW_LINES);

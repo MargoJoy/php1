@@ -1,6 +1,6 @@
 <?php
 
-class Image
+class image
 {
     protected $file;
 
@@ -9,7 +9,7 @@ class Image
         $this->file = $file;
     }
 
-    public function getImg()
+    public function getFile()
     {
         return $this->file;
     }

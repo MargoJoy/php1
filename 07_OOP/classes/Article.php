@@ -7,7 +7,7 @@ class Article
 
     public function __construct($title, $text)
     {
-        $this->title = $title;
-        $this->text = $text;
+     $this->title = $title;
+     $this->text = $text;
     }
 }

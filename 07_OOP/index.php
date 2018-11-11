@@ -1,19 +1,16 @@
 <?php
 session_start();
-require_once __DIR__ . '/classes/View.php';
+
+require_once  __DIR__ . '/classes/View.php';
 require_once __DIR__ . '/classes/Gallery.php';
-require_once __DIR__ . '/classes/Image.php';
-require_once __DIR__ . '/function.php';
 
-$temp = __DIR__ . '/templates/index.php';
+if (isset( $_GET['do'] )&& $_GET['do'] == 'exit' ) {
+    unset($_SESSION['name']);
+}
 
-$dirGallery = __DIR__ .'/img';
-
-$gallery = new Gallery($dirGallery);
-
-$image = new Image($gallery);
+$template = __DIR__ . '/templates/gallery.php';
+$gallery = new Gallery(__DIR__ . '/images');
 
 $view = new View();
-$view->assign('gallery', $gallery->show());
-$view->display($temp);
-
+$view->assign('gallery', $gallery->getData());
+$view->display($template);
