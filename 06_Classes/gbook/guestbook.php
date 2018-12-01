@@ -7,7 +7,7 @@ $guestbook = new GuestBook(__DIR__ . '/text.txt');
 
 <?php foreach ($guestbook->getData() as $line){?>
     <p><?php echo $line; ?></p>
-<?php }?>
+<?php } ?>
 
 <form action="/gbook/gbookUploader.php" method="post">
     <label for="">
