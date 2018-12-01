@@ -1,17 +1,14 @@
 <?php
 session_start();
 
-
 if (isset($_GET['do']) && $_GET['do'] == 'exit') {
     unset($_SESSION['name']);
 }
 
-$list = scandir(__DIR__ . '/gallery/img');
-$list = array_diff($list, ['.', '..']);
+$images = scandir(__DIR__ . '/gallery/img');
+$images = array_diff($images, ['.', '..']);
+
 ?>
-
-<a href="/gbook/guestbook.php">Гостевая книга</a>
-
 <?php if (isset($_SESSION['name'])) {?>
     <p>Имя пользователя: <?php echo $_SESSION['name']; ?> </p>
     <a href="/index.php?do=exit" style="display:block;">Выйти </a>
@@ -19,18 +16,18 @@ $list = array_diff($list, ['.', '..']);
     <a href="/login.php" style="display:block;">Войти</a>
 <?php } ?>
 
+<a href="/gbook/guestbook.php">Гостевая книга</a>
 
-    <h3>Галерея</h3>
-<form action="/gallery/upload.php" method="post" enctype="multipart/form-data" >
-    <input type="file" name="newImg">
-    <input type="submit" value=Загрузить>
+<form action="/gallery/uploaer.php" method="post" enctype="multipart/form-data">
+    <label for="">
+        <input type="file" name="newImg">
+    </label>
+    <input type="submit">
 </form>
 
-<? foreach ($list as $name){ ?>
-    <a href="/gallery/image.php?id=<? echo $name; ?>">
-        <img src="/gallery/img/<? echo $name; ?>" alt="" width="300px">
+<? foreach ($images as $image){ ?>
+    <a href="/gallery/image.php?id=<? echo $image; ?>">
+        <img src="/gallery/img/<? echo $image; ?>" alt="" width="300px">
     </a>
 <?}?>
-
-
 

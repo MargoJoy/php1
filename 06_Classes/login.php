@@ -1,20 +1,18 @@
 <?php
 session_start();
-include __DIR__ . '/function.php';
+include __DIR__ . '/functions.php';
 
-
-if (null !== getCurrentUser()) {
+if (null !== getCurrentUser()){
     header('Location: /index.php');
 } else {
-
-    if ((isset($_POST['login'])) && (isset($_POST['password']))) {
-
-        if (checkPassword($_POST['login'], $_POST['password'])) {
+    if (isset($_POST['login']) && isset($_POST['password'])){
+        if (checkPassword($_POST['login'], $_POST['password'])){
             $_SESSION['name'] = $_POST['login'];
             header('Location: /index.php');
         }
     }
 }
+
 ?>
 <a href="/index.php">На главную</a>
 <form action="/login.php" method="post">

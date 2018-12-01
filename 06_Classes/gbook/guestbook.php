@@ -1,20 +1,16 @@
 <?php
-include __DIR__ . '/gbookUpload.php';
+include __DIR__ . '/../classes/GuestBook.php';
 $guestbook = new GuestBook(__DIR__ . '/text.txt');
 ?>
-<h3>Гостевая книга</h3>
+<a href="/index.php">На глаавную</a>
 
-<?php foreach ($guestbook->getData() as $line){ ?>
+<?php foreach ($guestbook->getData() as $line){?>
     <p><?php echo $line; ?></p>
-<?php } ?>
+<?php }?>
 
-<form action="/gbook/guestbook.php" method="post">
+<form action="/gbook/gbookUploader.php" method="post">
     <label for="">
         <input type="text" name="text">
     </label>
-    <label for="">
-        <input type="submit">
-    </label>
+    <input type="submit">
 </form>
-
-<a href="/index.php">На главную</a>
