@@ -14,12 +14,10 @@ $userName = $authentication->getCurrentUser();
 $gbook = new GuestBook($textGB);
 $newLines = $_POST['text'];
 
-if (isset($userName)) {
-    if (null !== $newLines){
-        $gbookrecord = new GuestBookRecord($newLines);
-        $gbook->append($gbookrecord)->save();
-        header('Location: /guestBook.php');
-    }
+if (isset($userName) && null !== $newLines) {
+    $gbookrecord = new GuestBookRecord($newLines);
+    $gbook->append($gbookrecord)->save();
+    header('Location: /guestBook.php');
 }
 
 $view = new View();

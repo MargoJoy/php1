@@ -11,7 +11,7 @@ class Uploader
 
     public function  isUploaded()
     {
-        if (isset($_FILES[$this->formName]) && 0 == $_FILES[$this->formName]['error']){
+        if (isset($_FILES[$this->formName]) && 0 == $_FILES[$this->formName]['error']) {
             return true;
         } else {
             return false;

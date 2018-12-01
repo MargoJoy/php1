@@ -10,7 +10,7 @@ class Gallery
     {
         $this->path = $path;
         $images = scandir($this->path);
-        foreach ($images as $image) {
+        foreach ($images as $image){
             if ($image == '.' || $image == '..') {
                 $images = array_diff($images, ['.', '..']);
             } else {
@@ -23,5 +23,4 @@ class Gallery
     {
         return $this->data;
     }
-
 }

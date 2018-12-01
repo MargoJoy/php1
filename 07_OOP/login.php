@@ -11,11 +11,9 @@ $authentication = new Authentication($users);
 if (null !== $authentication->getCurrentUser()){
     header('Location: /index.php');
 } else {
-    if (isset($_POST['login']) && isset($_POST['password'])) {
-        if ($authentication->checkPassword($_POST['login'], $_POST['password'])) {
-            $_SESSION['name'] = $_POST['login'];
-            header('Location: /index.php');
-        }
+    if (isset($_POST['login']) && isset($_POST['password']) && $authentication->checkPassword($_POST['login'], $_POST['password'])) {
+        $_SESSION['name'] = $_POST['login'];
+        header('Location: /index.php');
     }
 }
 

@@ -30,12 +30,8 @@ class Authentication
 
     public function getCurrentUser()
     {
-        if ($this->existsUser($_SESSION['name'] )){
-            if (!empty($_SESSION['name'])){
-                return $_SESSION['name'];
-            } else {
-                return null;
-            }
+        if (!empty($_SESSION['name'] && $this->existsUser($_SESSION['name']))) {
+            return $_SESSION['name'];
         } else {
             return null;
         }
