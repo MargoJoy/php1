@@ -1,6 +1,7 @@
 <?php
 include __DIR__ . '/../classes/GuestBook.php';
 $guestbook = new GuestBook(__DIR__ . '/text.txt');
+
 ?>
 <a href="/index.php">На глаавную</a>
 

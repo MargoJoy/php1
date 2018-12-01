@@ -8,7 +8,7 @@ $line = $_POST['text'];
 $userName = getCurrentUser();
 
 
-if (isset($line) && isset($userName)){
+if (isset($line) && isset($userName)) {
     $guestbook->append($line)->save();
 }
 header('Location: /gbook/guestbook.php');
