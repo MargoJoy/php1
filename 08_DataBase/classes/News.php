@@ -10,7 +10,7 @@ class News
     {
         $db = new DB();
 
-        if (!empty($data) ) {
+        if (!empty($data)) {
             $sql = 'SELECT * FROM news WHERE id=:id';
             $dbquery = $db->query($sql, $data);
         } else {
@@ -18,8 +18,7 @@ class News
             $dbquery = $db->query($sql);
         }
 
-        foreach ($dbquery as $article){
-
+        foreach ($dbquery as $article) {
             $this->database[] = new Article(
                 $article['id'],
                 $article['title'],

@@ -7,5 +7,4 @@ $view = new View();
 $news = new News();
 
 $view->assign('news', $news->getData());
-
 $view->display($template);

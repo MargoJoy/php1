@@ -16,6 +16,5 @@
     <p><?php echo $article->author; ?></p>
 <?php } ?>
 
-<?php var_dump($data['oneArticle']) ?>
 </body>
 </html>
