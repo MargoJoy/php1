@@ -4,19 +4,29 @@ require_once __DIR__ . '/Db.php';
 
 class News
 {
-    protected $data;
+    protected $database;
 
-    public function __construct()
+    public function getData(array $data = [])
     {
-        $db = new Db();
-        $dataNews = $db->query('SELECT * FROM news');
+        $db = new DB();
 
-        foreach ($dataNews as $value){
-            $this->data[] = new Article($value['title'], $value['text']);
+        if (!empty($data) ) {
+            $sql = 'SELECT * FROM news WHERE id=:id';
+            $dbquery = $db->query($sql, $data);
+        } else {
+            $sql = 'SELECT * FROM news';
+            $dbquery = $db->query($sql);
         }
-    }
-    public function getData()
-    {
-        return $this->data;
+
+        foreach ($dbquery as $article){
+
+            $this->database[] = new Article(
+                $article['id'],
+                $article['title'],
+                $article['text'],
+                $article['author']);
+        }
+        return $this->database;
     }
 }
+

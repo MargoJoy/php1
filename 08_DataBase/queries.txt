@@ -1,0 +1,25 @@
+CREATE SCHEMA news;
+
+CREATE TABLE news
+(
+  id SERIAL,
+  tittle VARCHAR(300),
+  text TEXT,
+  author VARCHAR(100)
+);
+
+INSERT INTO news (title, text, author)
+VALUES ('Статья 1', 'Текст 1 статьи', 'Автор 1');
+
+INSERT INTO news (title, text, author)
+VALUES ('Статья Test', 'Текст Test статьи', 'Автор Test');
+
+INSERT INTO news (title, text, author)
+VALUES ('Статья 2', 'Текст 2 статьи', 'Автор 2');
+
+INSERT INTO news (title, text, author)
+VALUES ('Статья 3', 'Текст 3 статьи', 'Автор 3');
+
+DELETE FROM news WHERE id=2;
+
+SELECT * FROM news;SELECT * FROM news;

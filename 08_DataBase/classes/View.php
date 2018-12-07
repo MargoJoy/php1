@@ -1,9 +1,14 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: User
+ * Date: 003 03.12.18
+ * Time: 16:17
+ */
+
 class View
 {
-
-    public $data = [];
-
+    protected $data = [];
     public function assign($name, $value)
     {
         $this->data[$name] = $value;

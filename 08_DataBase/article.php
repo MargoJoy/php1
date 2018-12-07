@@ -1,17 +1,19 @@
 <?php
-require __DIR__ . '/classes/View.php';
-require __DIR__ . '/classes/News.php';
-$temp = __DIR__ . '/templates/article.php';
+require_once  __DIR__ . '/classes/View.php';
+require_once __DIR__ . '/classes/News.php';
+
+$template = __DIR__ . '/templates/article.php';
+
 $view = new View();
 $news = new News();
 
-if (isset($_GET['id'])) {
-    $id  = $_GET['id'];
-    $article = $news->getData()[$id];
+if (isset($_GET['id']) && !empty($_GET['id'])) {
 
-    $view->assign('oneArticle', $article);
+    $data = [':id' => $_GET['id']];
+    $view->assign('oneArticle', $news->getData($data));
+
 } else {
     header('Location: /index.php');
 }
 
-$view->display($temp);
+$view->display($template);
